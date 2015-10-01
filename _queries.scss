@@ -1,0 +1,10 @@
+$landscape: "all and (orientation: landscape) and (min-device-aspect-ratio: 1/1)";
+$portrait-mobile-keyboard: "all and (orientation: landscape) and (max-device-aspect-ratio: 1/1)";
+$portrait-desktop: "all and (orientation: portrait) and (min-device-aspect-ratio: 1/1)";
+$portrait-mobile: "all and (orientation: portrait) and (max-device-aspect-ratio: 1/1)";
+
+$extra-small-width: "all and (max-width: 639px)";
+$small-width: "all and (min-width: 640px) and (max-width: 979px)";
+$medium-width: "all and (min-width: 980px) and (max-width: 1279px)";
+$large-width: "all and (min-width: 1280px)";
+

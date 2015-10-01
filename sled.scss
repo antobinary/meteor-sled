@@ -1,0 +1,820 @@
+@import "queries";
+@import "variables";
+
+//////////////////////////////
+// .sl-left-drawer:
+
+@mixin left-drawer {
+  z-index: 1000;
+  position: fixed;
+  left: -$left-drawer-width;
+  width: $left-drawer-width;
+
+  transition: transform $left-drawer-speed linear;
+  -moz-transition: transform $left-drawer-speed linear;
+  -webkit-transition: transform $left-drawer-speed linear;
+  -ms-transition: transform $left-drawer-speed linear;
+  -o-transition: transform $left-drawer-speed linear;
+}
+
+.sl-left-drawer {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include left-drawer;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include left-drawer;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include left-drawer;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include left-drawer;
+    }
+  }
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include left-drawer;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include left-drawer;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include left-drawer;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include left-drawer;
+    }
+  }
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include left-drawer;
+  }
+}
+
+//////////////////////////////
+// .sl-left-drawer-out:
+
+@mixin left-drawer-out {
+  transform: translateX($left-drawer-width);
+  -moz-transform: translateX($left-drawer-width);
+  -webkit-transform: translateX($left-drawer-width);
+  -ms-transform: translateX($left-drawer-width);
+  -o-transform: translateX($left-drawer-width);
+}
+
+.sl-left-drawer-out {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include left-drawer-out;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include left-drawer-out;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include left-drawer-out;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include left-drawer-out;
+    }
+  }
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include left-drawer-out;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include left-drawer-out;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include left-drawer-out;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include left-drawer-out;
+    }
+  }
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include left-drawer-out;
+  }
+}
+
+//////////////////////////////
+// .sl-right-drawer:
+
+@mixin right-drawer {
+  z-index: 1000;
+  position: fixed;
+  transform: translateX(100vw);
+  width: $right-drawer-width;
+
+  transition: transform $right-drawer-speed linear;
+  -moz-transition: transform $right-drawer-speed linear;
+  -webkit-transition: transform $right-drawer-speed linear;
+  -ms-transition: transform $right-drawer-speed linear;
+  -o-transition: transform $right-drawer-speed linear;
+}
+
+.sl-right-drawer {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include right-drawer;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include right-drawer;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include right-drawer;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include right-drawer;
+    }
+  }
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include right-drawer;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include right-drawer;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include right-drawer;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include right-drawer;
+    }
+  }
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include right-drawer;
+  }
+}
+
+//////////////////////////////
+// .sl-right-drawer-out:
+
+@mixin right-drawer-out {
+  transform: translate(40vw, 0);
+  -moz-transform: translate(40vw, 0);
+  -webkit-transform: translate(40vw, 0);
+  -ms-transform: translate(40vw, 0);
+  -o-transform: translate(40vw, 0);
+}
+
+.sl-right-drawer-out {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include right-drawer-out;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include right-drawer-out;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include right-drawer-out;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include right-drawer-out;
+    }
+  }
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include right-drawer-out;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include right-drawer-out;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include right-drawer-out;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include right-drawer-out;
+    }
+  }
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include right-drawer-out;
+  }
+}
+
+//////////////////////////////
+// .sl-hamburger:
+
+.sl-hamburger {
+  span {
+    &::before {
+      top: -225%;
+    }
+    &::before, &::after {
+      background-color: inherit;
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+    &::after {
+      bottom: -225%;
+    }
+    background-color: inherit;
+    height: 10%;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 45%;
+  }
+}
+
+//////////////////////////////
+// .sl-ham-la-cw:
+
+@mixin hamburger-left-arrow-clockwise {
+  span {
+    &::before {
+      transform-origin: top right;
+      -moz-transform-origin: top right;
+      -webkit-transform-origin: top right;
+      -ms-transform-origin: top right;
+      -o-transform-origin: top right;
+
+      transition: width $left-arrow-speed, transform $left-arrow-speed, top $left-arrow-speed;
+      -moz-transition: width $left-arrow-speed, -moz-transform $left-arrow-speed, top $left-arrow-speed;
+      -webkit-transition: width $left-arrow-speed, -webkit-transform $left-arrow-speed, top $left-arrow-speed;
+      -o-transition: width $left-arrow-speed, -o-transform $left-arrow-speed, top $left-arrow-speed;
+    }
+    &::after {
+      transform-origin: bottom right;
+      -moz-transform-origin: bottom right;
+      -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+      -o-transform-origin: bottom right;
+
+      transition: width $left-arrow-speed, transform $left-arrow-speed, bottom $left-arrow-speed;
+      -moz-transition: width $left-arrow-speed, -moz-transform $left-arrow-speed, bottom $left-arrow-speed;
+      -webkit-transition: width $left-arrow-speed, -webkit-transform $left-arrow-speed, bottom $left-arrow-speed;
+      -ms-transition: width $left-arrow-speed, -ms-transform $left-arrow-speed, bottom $left-arrow-speed;
+      -o-transition: width $left-arrow-speed, -o-transform $left-arrow-speed, bottom $left-arrow-speed;
+    }
+    transition: transform $left-arrow-speed;
+    -moz-transition: -moz-transform $left-arrow-speed;
+    -webkit-transition: -webkit-transform $left-arrow-speed;
+    -o-transition: -o-transform $left-arrow-speed;
+  }
+  &.sl-toggled-on span {
+    &::before {
+      transform: translateY(50%) translateX(95%) rotate(45deg);
+      -moz-transform: translateY(50%) translateX(95%) rotate(45deg);
+      -webkit-transform: translateY(50%) translateX(95%) rotate(45deg);
+      -ms-transform: translateY(50%) translateX(95%) rotate(45deg);
+      -o-transform: translateY(50%) translateX(95%) rotate(45deg);
+      top: 0px;
+    }
+    &::before, &::after {
+      width: 55%;
+    }
+    &::after {
+      transform: translateY(-50%) translateX(95%) rotate(-45deg);
+      -moz-transform: translateY(-50%) translateX(95%) rotate(-45deg);
+      -webkit-transform: translateY(-50%) translateX(95%) rotate(-45deg);
+      -ms-transform: translateY(-50%) translateX(95%) rotate(-45deg);
+      -o-transform: translateY(-50%) translateX(95%) rotate(-45deg);
+      bottom: 0px;
+    }
+    transform: rotate(0.5turn);
+    -moz-transform: rotate(0.5turn);
+    -webkit-transform: rotate(0.5turn);
+    -ms-transform: rotate(0.5turn);
+    -o-transform: rotate(0.5turn);
+  }
+}
+
+.sl-ham-la-cw {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include hamburger-left-arrow-clockwise;
+    }
+  }
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include hamburger-left-arrow-clockwise;
+  }
+}
+
+//////////////////////////////
+// .sl-ham-ra-cw:
+
+@mixin hamburger-right-arrow-clockwise {
+  span {
+    &::before {
+      transform-origin: top left;
+      -moz-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+      -o-transform-origin: top left;
+
+      transition: width $right-arrow-speed, transform $right-arrow-speed, top $right-arrow-speed;
+      -moz-transition: width $right-arrow-speed, -moz-transform $right-arrow-speed, top $right-arrow-speed;
+      -webkit-transition: width $right-arrow-speed, -webkit-transform $right-arrow-speed, top $right-arrow-speed;
+      -o-transition: width $right-arrow-speed, -o-transform $right-arrow-speed, top $right-arrow-speed;
+    }
+    &::after {
+      transform-origin: bottom left;
+      -moz-transform-origin: bottom left;
+      -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+      -o-transform-origin: bottom left;
+
+      transition: transform $right-arrow-speed, width $right-arrow-speed, bottom $right-arrow-speed;
+      -moz-transition: -moz-transform $right-arrow-speed, width $right-arrow-speed, bottom $right-arrow-speed;
+      -webkit-transition: -webkit-transform $right-arrow-speed, width $right-arrow-speed, bottom $right-arrow-speed;
+      -ms-transition: -ms-transform $right-arrow-speed, width $right-arrow-speed, bottom $right-arrow-speed;
+      -o-transition: -o-transform $right-arrow-speed, width $right-arrow-speed, bottom $right-arrow-speed;
+    }
+    transition: transform $right-arrow-speed;
+    -moz-transition: -moz-transform $right-arrow-speed;
+    -webkit-transition: -webkit-transform $right-arrow-speed;
+    -o-transition: -o-transform $right-arrow-speed;
+  }
+  &.sl-toggled-on span {
+    &::before {
+      transform: translateY(53%) translateX(-20%) rotate(-45deg);
+      -moz-transform: translateY(53%) translateX(-20%) rotate(-45deg);
+      -webkit-transform: translateY(53%) translateX(-20%) rotate(-45deg);
+      -ms-transform: translateY(53%) translateX(-20%) rotate(-45deg);
+      -o-transform: translateY(53%) translateX(-20%) rotate(-45deg);
+      top: 0;
+    }
+    &::before, &::after {
+      width: 55%;
+    }
+    &::after {
+      transform: translateY(-53%) translateX(-20%) rotate(45deg);
+      -moz-transform: translateY(-53%) translateX(-20%) rotate(45deg);
+      -webkit-transform: translateY(-53%) translateX(-20%) rotate(45deg);
+      -ms-transform: translateY(-53%) translateX(-20%) rotate(45deg);
+      -o-transform: translateY(-53%) translateX(-20%) rotate(45deg);
+      bottom: 0;
+    }
+    transform: rotate(0.5turn);
+    -moz-transform: rotate(0.5turn);
+    -webkit-transform: rotate(0.5turn);
+    -ms-transform: rotate(0.5turn);
+    -o-transform: rotate(0.5turn);
+  }
+}
+
+.sl-ham-ra-cw {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include hamburger-right-arrow-clockwise;
+    }
+  }
+
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include hamburger-right-arrow-clockwise;
+  }
+}
+
+//////////////////////////////
+// .sl-left-drawer-content-delay:
+
+@mixin left-drawer-content-delay {
+  .sl-left-drawer-item {
+    transition: transform $left-menu-items-speed;
+    -moz-transition: -moz-transform $left-menu-items-speed;
+    -webkit-transition: -webkit-transform $left-menu-items-speed;
+    -o-transition: -o-transform $left-menu-items-speed;
+
+    transform: translateX(-$left-drawer-width);
+    -moz-transform: translateX(-$left-drawer-width);
+    -webkit-transform: translateX(-$left-drawer-width);
+    -ms-transform: translateX(-$left-drawer-width);
+    -o-transform: translateX(-$left-drawer-width);
+  }
+}
+
+.sl-left-drawer-content-delay {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include left-drawer-content-delay;
+    }
+  }
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include left-drawer-content-delay;
+  }
+}
+
+//////////////////////////////
+// .sl-left-drawer-content-delay.sl-left-drawer-out:
+
+@mixin left-drawer-content-delay-with-drawer-out {
+  @for $i from 1 through $max-left-menu-items-number {
+    .sl-left-drawer-item:nth-child(#{$i}) {
+      transition-delay: #{$i * $left-menu-items-delay-leg}ms;
+      -moz-transition-delay: #{$i * $left-menu-items-delay-leg}ms;
+      -webkit-transition-delay: #{$i * $left-menu-items-delay-leg}ms;
+      -o-transition-delay: #{$i * $left-menu-items-delay-leg}ms;
+
+      transform: translateX(0);
+      -moz-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+  }
+}
+
+.sl-left-drawer-content-delay.sl-left-drawer-out {
+  &.sl-xs {
+    @media #{$extra-small-width} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &.sl-sm {
+    @media #{$small-width} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &.sl-md {
+    @media #{$medium-width} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &.sl-lg {
+    @media #{$large-width} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &.sl-landscape {
+    @media #{$landscape} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &.sl-portrait-keyboard {
+    @media #{$portrait-mobile-keyboard} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &.sl-portrait-desktop {
+    @media #{$portrait-desktop} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &.sl-portrait-mobile {
+    @media #{$portrait-mobile} {
+      @include left-drawer-content-delay-with-drawer-out;
+    }
+  }
+  &:not(.sl-xs):not(.sl-sm):not(.sl-md):not(.sl-lg):not(.sl-landscape):not(.sl-portrait-keyboard):not(.sl-portrait-desktop):not(.sl-portrait-mobile) {
+    @include left-drawer-content-delay-with-drawer-out;
+  }
+}
+
+//////////////////////////////
+// FAB:
+
+.sl-left-hr-dbl-fab .sl-fab-trigger {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 10px;
+  bottom: 10px;
+  transform:rotate(0);
+  -ms-transform: rotate(0);
+  -webkit-transform: rotate(0);
+}
+
+.sl-fab-container.sl-left-hr-dbl-fab > .sl-fab-btn:nth-child(2) {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 70px;
+  bottom: 10px;
+  opacity: 0;
+}
+
+.sl-fab-container.sl-left-hr-dbl-fab > .sl-fab-btn:nth-child(3) {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 70px;
+  bottom: 65px;
+  opacity: 0;
+}
+
+.sl-fab-container.sl-left-hr-dbl-fab > .sl-fab-btn:nth-child(4) {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 130px;
+  bottom: 10px;
+  opacity: 0;
+}
+
+.sl-fab-container.sl-left-hr-dbl-fab > .sl-fab-btn:nth-child(5) {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 130px;
+  bottom: 65px;
+  opacity: 0;
+}
+
+.sl-fab-container.sl-left-hr-dbl-fab > .sl-fab-btn:nth-child(6) {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 190px;
+  bottom: 10px;
+  opacity: 0;
+}
+
+.sl-fab-container.sl-left-hr-dbl-fab > .sl-fab-btn:nth-child(7) {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 190px;
+  bottom: 65px;
+  opacity: 0;
+}
+
+.sl-left-hr-dbl-fab.sl-fab-open {
+  .sl-fab-trigger {
+    animation: rotate 0.15s forwards;
+  }
+  .sl-fab-btn:nth-child(2), .sl-fab-btn:nth-child(3) {
+    animation: appear 0.15s forwards;
+  }
+  .sl-fab-btn:nth-child(4), .sl-fab-btn:nth-child(5) {
+    animation: appear 0.15s forwards;
+    animation-delay: 0.075s;
+  }
+  .sl-fab-btn:nth-child(6), .sl-fab-btn:nth-child(7) {
+    animation: appear 0.15s forwards;
+    animation-delay: 0.15s;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.05;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.15;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  35% {
+    opacity: 0.35;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  45% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  55% {
+    opacity: 0.55;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  65% {
+    opacity: 0.65;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  95% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform:rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+  }
+}
+
+@keyframes derotate {
+  100% {
+    transform:rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+}
+
+.sl-left-hr-dbl-fab.sl-fab-closed {
+  .sl-fab-trigger {
+    animation: derotate 0.15s forwards;
+  }
+  .sl-fab-btn:nth-child(2), .sl-fab-btn:nth-child(3) {
+    animation: disappear 0.15s forwards;
+    animation-delay: 0.15s;
+  }
+  .sl-fab-btn:nth-child(4), .sl-fab-btn:nth-child(5) {
+    animation: disappear 0.15s forwards;
+    animation-delay: 0.075s;
+  }
+  .sl-fab-btn:nth-child(6), .sl-fab-btn:nth-child(7) {
+    animation: disappear 0.15s forwards;
+  }
+}
+
+.sl-fab-container {
+  button {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    border-radius: 50%;
+    &:focus {
+      outline:0;
+    }
+  }
+}
