@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Mobile first front-end library for creating high performance animations',
-  version: '0.0.1',
+  version: '0.0.2',
   git: 'https://github.com/gthacoder/meteor-sled.git',
   documentation: null
 });
